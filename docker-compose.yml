@@ -4,7 +4,7 @@ services:
   php-app:
     build:
       context: .
-      dockerfile: dockerfile-php
+      dockerfile: docker-php.txt
     ports:
       - "8080:80" # Map host port 8080 to container port 80
     depends_on:
@@ -13,6 +13,6 @@ services:
   mysql-db:
     build:
       context: .
-      dockerfile: dockerfile-mysql
+      dockerfile: docker-mysql.txt
     ports:
       - "3306:3306" # Map host port 3306 to container port 3306
